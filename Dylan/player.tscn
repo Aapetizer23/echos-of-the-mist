@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dj0le2dn0f7a5"]
+
+[ext_resource type="Script" uid="uid://b6fuswgdirlx6" path="res://Dylan/character_body_2d.gd" id="1_0cggj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ngmvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngmvj"]
+size = Vector2(0.99999994, 1.0046514)
+
+[node name="Player" type="CharacterBody2D" unique_id=1678605382]
+motion_mode = 1
+script = ExtResource("1_0cggj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=312993492]
+position = Vector2(3.8146973e-06, -3.8146973e-06)
+scale = Vector2(18.000008, 18.000006)
+texture = SubResource("PlaceholderTexture2D_ngmvj")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=592711249]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(18, 18)
+shape = SubResource("RectangleShape2D_ngmvj")
