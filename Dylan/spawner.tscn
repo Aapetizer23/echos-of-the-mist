@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bjk3ag6td84nw"]
+
+[ext_resource type="Script" uid="uid://bgol2dp5pedkm" path="res://Dylan/marker_2d.gd" id="1_rulnk"]
+
+[node name="Spawner" type="Node2D" unique_id=1429989150]
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=832765635]
+script = ExtResource("1_rulnk")
+
+[node name="SpawnerCooldown" type="Timer" parent="Marker2D" unique_id=1506156289]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Marker2D/SpawnerCooldown" to="Marker2D" method="_on_spawner_cooldown_timeout"]
