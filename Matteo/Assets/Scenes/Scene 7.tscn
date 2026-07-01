@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://sr4bwmsjfboj" path="res://Matteo/Assets/Scripts/scene_7.gd" id="1_fhs7n"]
 [ext_resource type="Texture2D" uid="uid://d06ysgefw8ii3" path="res://Matteo/Assets/Sprites/Blood_pool_background.png" id="1_mkl0l"]
+[ext_resource type="PackedScene" uid="uid://bmkfqeuau83t4" path="res://Matteo/Assets/Scenes/torch.tscn" id="3_8cnh4"]
 
 [node name="Control" type="Control" unique_id=916408463]
 layout_mode = 3
@@ -32,5 +33,15 @@ offset_top = 604.0
 offset_right = 629.0
 offset_bottom = 635.0
 text = "Back"
+
+[node name="Torch" parent="." unique_id=1773517570 instance=ExtResource("3_8cnh4")]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 369.99997
+offset_right = 809.0
+offset_bottom = 413.99997
+rotation = -0.46556795
+scale = Vector2(-4.791074, 4.791074)
+torch_ID = 1
 
 [connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]

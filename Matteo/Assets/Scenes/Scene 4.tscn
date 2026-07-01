@@ -2,6 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bqtf7bgeehied" path="res://Matteo/Assets/Scripts/scene_4.gd" id="1_8j6ji"]
 [ext_resource type="Texture2D" uid="uid://h1pt06du5jo7" path="res://Matteo/Assets/Sprites/Basement_background.png" id="1_narsj"]
+[ext_resource type="PackedScene" uid="uid://bmkfqeuau83t4" path="res://Matteo/Assets/Scenes/torch.tscn" id="3_i483r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i483r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypuj5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfs4e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k36su"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8lon"]
 
 [node name="Control" type="Control" unique_id=1927963025]
 layout_mode = 3
@@ -40,6 +51,19 @@ offset_top = 539.0
 offset_right = 629.0
 offset_bottom = 635.0
 text = "Turn Around"
+
+[node name="Torch" parent="." unique_id=1773517570 instance=ExtResource("3_i483r")]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 97.0
+offset_right = 881.0
+offset_bottom = 141.0
+scale = Vector2(-2.1510737, 2.1510737)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i483r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ypuj5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wfs4e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k36su")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8lon")
 
 [connection signal="button_down" from="Label/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Label/Button2" to="." method="_on_button_2_button_down"]

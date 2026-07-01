@@ -4,11 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://c5uesqois6dvg" path="res://Matteo/Assets/Sprites/Torch_small.webp" id="2_s7tnq"]
 [ext_resource type="Texture2D" uid="uid://c75ygmvnn27tj" path="res://Matteo/Assets/Sprites/Torch_on.png" id="3_i81o0"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dcpaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7tnq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i81o0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fgd5w"]
+
 [node name="Torch" type="Button" unique_id=1773517570]
 offset_left = 14.0
 offset_top = -27.0
 offset_right = 46.0
 offset_bottom = 17.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dcpaq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_s7tnq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i81o0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fgd5w")
 script = ExtResource("1_dcpaq")
 
 [node name="On" type="TextureRect" parent="." unique_id=1100916654]
@@ -21,6 +33,7 @@ texture = ExtResource("3_i81o0")
 expand_mode = 1
 
 [node name="Off" type="TextureRect" parent="." unique_id=307263663]
+modulate = Color(0.54, 0.54, 0.54, 1)
 layout_mode = 0
 offset_left = -5.0
 offset_top = 1.0

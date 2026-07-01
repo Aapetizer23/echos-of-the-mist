@@ -7,7 +7,6 @@ func _ready():
 	is_on = global_torch_manager.torch_array[torch_ID]
 	$Off.visible = !is_on
 	$On.visible = is_on
-	
 
 
 func _on_button_down() -> void:
