@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var player: CharacterBody2D = $"../Game/Player"
+@onready var player: CharacterBody2D = $"../Node2D/Game/Player"
 const ENEMY = preload("uid://hl7g2dvajebj")
 @onready var health: int = 20
 @onready var sp: int = 20
@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 		sp = 20
 		enemynumber = 0
 		cash = 0
-		player = $"../Game/Player"
+		player = $"../Node2D/Game/Player"
